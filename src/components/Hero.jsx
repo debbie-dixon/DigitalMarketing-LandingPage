@@ -19,7 +19,6 @@ export default function Hero() {
             text="View Gallery"
             hover="hover:text-blue"
             rounded="rounded-md"
-            textColor="text-tColor"
             bgColor="bg-blue-300"
             textColor="text-black"
             font="font-semibold"
