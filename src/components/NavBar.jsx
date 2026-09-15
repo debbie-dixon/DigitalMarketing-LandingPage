@@ -6,39 +6,41 @@ export default function NavBar() {
   const closeMenu = () => setIsOpen(false);
   return (
     <>
-      <nav className="flex justify-between items-center gap-4 py-4 px-10 sticky top-0 left-0 w-full mx-auto z-50">
-        <p className="font-serif italic font-bold text-2xl">Logo</p>
-        <div className="hidden md:flex gap-4 font-sans items-center  text-gray-400">
+      <nav className="flex justify-between gap-4 py-4 px-10 sticky top-0  left-0 w-full mx-auto z-50">
+        <p className="font-serif italic font-bold text-2xl text-blue-950">
+          Logo
+        </p>
+        <div className="hidden md:flex gap-4 font-sans items-center  text-white text-sm tracking-wide">
           <a
             href="/"
-            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out"
+            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out font-bold"
           >
             Home
           </a>
           <a
             href="#about"
-            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out"
+            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out font-bold"
           >
-            About
+            Why Choose Us
           </a>
           <a
             href="#services"
-            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out"
+            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out font-bold"
           >
             Services
           </a>
           <a
             href="#contact"
-            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out"
+            className="px-2 py-1 rounded-md hover:border-b-2 hover:text-black transition-all ease-in-out font-bold"
           >
-            Contact
+            Contact Us
           </a>
         </div>
         <a
           href="#book"
-          className="px-4 py-1 hover:bg-black hover:text-white tracking-wide rounded-full bg-gray-400"
+          className="px-5 py-2 hidden md:flex text-white hover:bg-white hover:text-black tracking-wide text-sm rounded-full bg-blue-950 transition-colors"
         >
-          Book Us
+          Work With Us
         </a>
 
         <button

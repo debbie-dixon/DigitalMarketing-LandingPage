@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useEffect } from "react";
 import "./App.css";
 import Booking from "./components/Booking";
-import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Offers from "./components/Offers";
 import Footer from "./components/Footer";
@@ -24,8 +23,6 @@ function App() {
   }, []);
   return (
     <>
-      <NavBar />
-
       <main>
         <Hero />
         <Offers />

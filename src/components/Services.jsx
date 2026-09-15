@@ -1,39 +1,62 @@
 import ServiceCard from "./ServiceCard";
-import image from "../assets/image.jpeg";
 import Header from "./Header";
 
 export default function Services() {
   const myServices = [
     {
-      title: "Service",
+      title: "Social Media & Content Marketing",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima dolor veniam quisquam quibusdam quasi ipsa rem ad, pariatur cum accusamus.",
-      image: image,
+        "Build an engaged audience and amplify your brand presence across key platforms",
+      iconName: "message-square-heart",
+      bullets: [
+        "Platform Content Strategy & Visual Asset Creation",
+        "Community Management & Engagement Workflows",
+        "Paid Social Growth & Influencer Partnerships",
+        "Monthly Analytics & Strategy Reporting",
+      ],
     },
     {
-      title: "Service",
+      title: "Search Engine Optimization (SEO)",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima dolor veniam quisquam quibusdam quasi ipsa rem ad, pariatur cum accusamus.",
-      image: image, // Temporarily reuse the same image to test!
+        "Dominate search results and attract high-intent organic traffic that converts.",
+      iconName: "search",
+      bullets: [
+        "Strategic Keyword Research & Competitor Analysis",
+        "On-Page Optimization & Content Structuring",
+        "Technical SEO Audits & Speed Performance",
+        "Quality Backlink Acquisition & Authority Building",
+      ],
     },
     {
-      title: "Service",
+      title: "Pay Per Click (PPC) Management",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit minima dolor veniam quisquam quibusdam quasi ipsa rem ad, pariatur cum accusamus.",
-      image: image, // Temporarily reuse the same image to test!
+        "Drive immediate, scalable sales with high-ROI paid ad campaigns.",
+      iconName: "target",
+      bullets: [
+        "Targeted Campaign Setup for Google & Meta Ads",
+        "Audience Segmentation & Retargeting Workflows",
+        "Ad Copywriting & High-Converting Creative Design",
+        "Daily Bid Management & Performance Optimization",
+      ],
     },
   ];
   return (
     <>
-      <Header text="Our Services" id="services" />
+      <Header text="Our Core Services" id="services" color="text-blue-950" />
+      <p className="text-center text-blue-950 mt-4 mb-4 ">
+        Tailored digital marketing strategies designed to scale your business
+        and drive measurable ROI.
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mt-8 mb-8 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-items-center mt-8 mb-8 gap-8">
         {myServices.map((service, index) => (
           <ServiceCard
             key={index}
             title={service.title}
             description={service.description}
-            image={service.image}
+            iconName={service.iconName}
+            bullets={service.bullets}
+            // className="hover:scale-105 transition-transform duration-300"
           />
         ))}
       </div>
