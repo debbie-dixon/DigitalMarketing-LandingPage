@@ -1,7 +1,16 @@
 import DynamicIcons from "./DynamicIcons";
-export default function ServiceCard({ iconName, title, description, bullets }) {
+export default function ServiceCard({
+  iconName,
+  title,
+  description,
+  bullets,
+  style,
+}) {
   return (
-    <div className="flex flex-col w-full max-w-75 hover:scale-105 transition-transform duration-300  border-2 border-blue-950 shadow-md rounded-xl">
+    <div
+      style={style}
+      className="animate-fade-up flex w-full max-w-75 flex-col rounded-xl border-2 border-blue-950 shadow-md transition-transform duration-300 hover:scale-105"
+    >
       <div className="rounded-xl bg-blue-50 w-12 h-12 items-center p-4 justify-center flex mx-auto mt-4">
         <DynamicIcons iconName={iconName} padding="py-4" />
       </div>

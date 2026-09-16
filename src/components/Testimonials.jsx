@@ -75,7 +75,10 @@ export default function Testimonials() {
               <ChevronLeft size={22} aria-hidden="true" />
             </button>
 
-            <article className="min-h-56 min-w-0 flex-1 rounded-lg bg-white p-5 shadow-md sm:p-8">
+            <article
+              key={activeIndex}
+              className="animate-fade-in min-h-56 min-w-0 flex-1 rounded-lg bg-white p-5 shadow-md sm:p-8"
+            >
               <p className="mb-6 text-gray-600 italic">
                 &quot;{activeTestimonial.content}&quot;
               </p>

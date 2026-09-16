@@ -4,10 +4,17 @@ import NavBar from "./NavBar";
 
 export default function Hero() {
   return (
-    <div
-      style={{ backgroundImage: `url(${image})` }}
-      className="relative min-h-170 w-full bg-cover bg-center sm:min-h-screen"
-    >
+    <div className="relative min-h-170 w-full overflow-hidden sm:min-h-screen">
+      <link rel="preload" as="image" href={image} fetchPriority="high" />
+      <img
+        src={image}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-center"
+      />
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-gray-600/70 via-gray-600/60 to-transparent z-0 pointer-events-none" />
 
@@ -17,7 +24,7 @@ export default function Hero() {
 
         <section
           id="home"
-          className="flex w-full flex-col gap-8 px-5 pb-14 pt-20 sm:px-8 md:flex-row md:px-10 md:pb-16 md:pt-24"
+          className="animate-fade-up flex w-full flex-col gap-8 px-5 pb-14 pt-20 sm:px-8 md:flex-row md:px-10 md:pb-16 md:pt-24"
         >
           <div className="flex max-w-2xl flex-col items-start">
             <h1 className="text-start font-sans text-4xl font-bold leading-tight text-white sm:text-5xl">

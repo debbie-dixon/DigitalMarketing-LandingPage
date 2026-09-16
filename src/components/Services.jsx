@@ -56,6 +56,7 @@ export default function Services() {
             description={service.description}
             iconName={service.iconName}
             bullets={service.bullets}
+            style={{ animationDelay: `${index * 120}ms` }}
             // className="hover:scale-105 transition-transform duration-300"
           />
         ))}
