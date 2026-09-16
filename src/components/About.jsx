@@ -9,25 +9,37 @@ export default function About() {
     <>
       <section
         id="about"
-        className="w-full flex flex-col md:flex-row justify-between items-center gap-8 px-6 mt-8 mb-8"
+        className="mt-8 mb-8 flex w-full flex-col items-center gap-8 px-5 sm:px-6 md:flex-row md:justify-between"
       >
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2 max-w-lg mx-auto">
+        <div className="grid w-full max-w-lg grid-cols-1 gap-4 sm:grid-cols-2 md:mx-auto md:grid-cols-3 md:grid-rows-2">
           {/* Large Featured Image */}
           <div className="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl shadow-lg">
-            <img src={image} alt="Beach" className="object-cover h-full" />
+            <img
+              src={image}
+              alt="Beach"
+              className="h-64 w-full object-cover sm:h-full"
+            />
           </div>
 
           {/* Small Image 1 */}
           <div className="overflow-hidden rounded-xl shadow-lg">
-            <img src={image2} alt="Mountains" className="object-cover h-full" />
+            <img
+              src={image2}
+              alt="Mountains"
+              className="h-44 w-full object-cover sm:h-full"
+            />
           </div>
 
           {/* Small Image 2 */}
           <div className="overflow-hidden rounded-xl shadow-lg">
-            <img src={image3} alt="Forest" className="object-cover h-full" />
+            <img
+              src={image3}
+              alt="Forest"
+              className="h-44 w-full object-cover sm:h-full"
+            />
           </div>
         </div>
-        <div className="px-8">
+        <div className="w-full max-w-xl px-2 sm:px-8">
           <h1 className="font-black text-blue-950 text-2xl text-left mb-4">
             Why Choose Us
           </h1>
@@ -36,7 +48,7 @@ export default function About() {
             efficiency
           </p>
 
-          <section className="flex w-full gap-6 text-blue-950  ">
+          <section className="grid w-full gap-6 text-blue-950 sm:grid-cols-3">
             <div className="flex flex-col items-start">
               <DynamicIcons iconName="users" />
               <p className="text-sm ">

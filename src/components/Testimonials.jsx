@@ -51,7 +51,7 @@ export default function Testimonials() {
 
   return (
     <div className="bg-gray-100 py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Header
           text="What Our Clients Say"
           id="gallery"
@@ -61,18 +61,21 @@ export default function Testimonials() {
           Real results from ambitious brands scaling with our data-driven
           strategies
         </p>
-        <div className="max-w-2xl mx-auto">
-          <div className="relative flex items-center gap-3" aria-live="polite">
+        <div className="mx-auto max-w-2xl">
+          <div
+            className="relative flex items-center gap-2 sm:gap-3"
+            aria-live="polite"
+          >
             <button
               type="button"
               onClick={showPrevious}
               aria-label="Show previous testimonial"
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-950 text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2"
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-950 text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2 sm:h-11 sm:w-11"
             >
               <ChevronLeft size={22} aria-hidden="true" />
             </button>
 
-            <article className="min-h-56 flex-1 rounded-lg bg-white p-6 shadow-md sm:p-8">
+            <article className="min-h-56 min-w-0 flex-1 rounded-lg bg-white p-5 shadow-md sm:p-8">
               <p className="mb-6 text-gray-600 italic">
                 &quot;{activeTestimonial.content}&quot;
               </p>
@@ -96,7 +99,7 @@ export default function Testimonials() {
               type="button"
               onClick={showNext}
               aria-label="Show next testimonial"
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-950 text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2"
+              className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-950 text-white transition hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2 sm:h-11 sm:w-11"
             >
               <ChevronRight size={22} aria-hidden="true" />
             </button>

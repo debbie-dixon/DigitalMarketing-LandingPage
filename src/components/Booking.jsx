@@ -64,7 +64,7 @@ export default function Booking() {
   return (
     <>
       <Header text="Work With Us" id="book" color="text-blue-950" />
-      <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-xs my-8">
+      <div className="mx-4 my-8 max-w-xl rounded-2xl border border-slate-200 bg-white p-5 shadow-xs sm:mx-auto sm:p-8">
         <h2 className="text-2xl font-bold text-blue-950 mb-2">
           Send us a message
         </h2>

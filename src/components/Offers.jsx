@@ -4,15 +4,15 @@ export default function Offers() {
 
   return (
     <section className="w-full bg-white py-10 border-b md:rounded-b-5xl lg:rounded-b-5xl rounded-b-4xl shadow-sm border-slate-100 mb-8">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="mx-auto max-w-5xl px-5 sm:px-6">
         {/* Responsive Grid: 2 columns on mobile, 3 columns on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-8 justify-items-center">
+        <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-6 sm:grid-cols-3">
           {offerings.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 w-full max-w-50"
+              className="flex w-full max-w-50 items-center justify-center gap-3"
             >
-              <span className="font-sans font-semibold text-blue-950 text-lg md:text-2xl whitespace-nowrap">
+              <span className="text-center font-sans text-lg font-semibold text-blue-950 md:text-2xl">
                 {item}
               </span>
             </div>

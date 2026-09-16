@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div
       style={{ backgroundImage: `url(${image})` }}
-      className="bg-cover bg-center h-screen w-full relative"
+      className="relative min-h-170 w-full bg-cover bg-center sm:min-h-screen"
     >
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-gray-600/70 via-gray-600/60 to-transparent z-0 pointer-events-none" />
@@ -17,19 +17,19 @@ export default function Hero() {
 
         <section
           id="home"
-          className="w-full flex flex-col md:flex-row gap-8 pt-24 pb-16"
+          className="flex w-full flex-col gap-8 px-5 pb-14 pt-20 sm:px-8 md:flex-row md:px-10 md:pb-16 md:pt-24"
         >
-          <div className="flex flex-col items-start px-10 max-w-2xl">
-            <h1 className="font-sans font-bold text-4xl md:text-5xl text-white text-start leading-tight">
+          <div className="flex max-w-2xl flex-col items-start">
+            <h1 className="text-start font-sans text-4xl font-bold leading-tight text-white sm:text-5xl">
               Scale Your Brand{" "}
-              <span className="block mt-1">
+              <span className="mt-1 block">
                 With <span className="text-blue-950">Data-Driven</span>{" "}
                 Marketing
               </span>
             </h1>
-            <p className="font-sans text-white text-lg mt-4 font-medium">
-              We help businesses grow their online presence <br /> and drive
-              results through strategic marketing solutions.
+            <p className="mt-4 max-w-xl font-sans text-base font-medium leading-relaxed text-white sm:text-lg">
+              We help businesses grow their online presence and drive results
+              through strategic marketing solutions.
             </p>
             <div className="mt-6">
               <Button
