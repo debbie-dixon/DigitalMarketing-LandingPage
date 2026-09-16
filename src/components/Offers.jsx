@@ -1,6 +1,9 @@
-import DynamicIcons from "./DynamicIcons";
 export default function Offers() {
-  const offerings = ["30k+ projects", "500+ clients", "100% satisfaction"];
+  const offerings = [
+    { value: "30k+", label: "projects" },
+    { value: "500+", label: "clients" },
+    { value: "100%", label: "satisfaction" },
+  ];
 
   return (
     <section className="w-full bg-white py-10 border-b md:rounded-b-5xl lg:rounded-b-5xl rounded-b-4xl shadow-sm border-slate-100 mb-8">
@@ -12,8 +15,13 @@ export default function Offers() {
               key={index}
               className="flex w-full max-w-50 items-center justify-center gap-3"
             >
-              <span className="text-center font-sans text-lg font-semibold text-blue-950 md:text-2xl">
-                {item}
+              <span className="text-center font-sans text-blue-950">
+                <strong className="text-2xl font-bold md:text-3xl">
+                  {item.value}
+                </strong>{" "}
+                <span className="text-base font-normal md:text-lg">
+                  {item.label}
+                </span>
               </span>
             </div>
           ))}

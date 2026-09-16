@@ -11,13 +11,13 @@ export default function About() {
         id="about"
         className="mt-8 mb-8 flex w-full flex-col items-center gap-8 px-5 sm:px-6 md:flex-row md:justify-between"
       >
-        <div className="grid w-full max-w-lg grid-cols-1 gap-4 sm:grid-cols-2 md:mx-auto md:grid-cols-3 md:grid-rows-2">
+        <div className="grid w-full max-w-lg grid-cols-2 gap-3 sm:gap-4 md:mx-auto md:grid-cols-3 md:grid-rows-2">
           {/* Large Featured Image */}
-          <div className="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl shadow-lg">
+          <div className="col-span-2 overflow-hidden rounded-xl shadow-lg md:col-span-2 md:row-span-2">
             <img
               src={image}
               alt="Beach"
-              className="h-64 w-full object-cover sm:h-full"
+              className="h-40 w-full object-cover sm:h-52 md:h-full"
             />
           </div>
 
@@ -26,7 +26,7 @@ export default function About() {
             <img
               src={image2}
               alt="Mountains"
-              className="h-44 w-full object-cover sm:h-full"
+              className="h-24 w-full object-cover sm:h-32 md:h-full"
             />
           </div>
 
@@ -35,7 +35,7 @@ export default function About() {
             <img
               src={image3}
               alt="Forest"
-              className="h-44 w-full object-cover sm:h-full"
+              className="h-24 w-full object-cover sm:h-32 md:h-full"
             />
           </div>
         </div>

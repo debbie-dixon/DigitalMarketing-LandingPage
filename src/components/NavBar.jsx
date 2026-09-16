@@ -7,7 +7,7 @@ export default function NavBar() {
   return (
     <>
       <nav className="sticky left-0 top-0 z-50 flex w-full items-center justify-between gap-4 px-5 py-4 sm:px-8 md:px-10">
-        <p className="font-serif text-xl font-bold italic text-blue-950 sm:text-2xl">
+        <p className="font-serif text-xl font-bold italic text-white sm:text-2xl">
           Logo
         </p>
         <div className="hidden md:flex gap-4 font-sans items-center  text-white text-sm tracking-wide">
@@ -45,10 +45,10 @@ export default function NavBar() {
 
         <button
           onClick={() => setIsOpen(true)}
-          className="md:hidden text-tColor p-2 focus:outline-none"
+          className="md:hidden p-2 focus:outline-none"
           aria-label="Open Menu"
         >
-          <DynamicIcons iconName="menu" />
+          <DynamicIcons iconName="menu" color="text-white" />
         </button>
       </nav>
       {isOpen && (

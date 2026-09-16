@@ -8,11 +8,12 @@ export default function DynamicIcons({
   bg,
   width,
   height,
+  color = "text-blue-950",
 }) {
   return (
     <a
       href={link}
-      className={`flex flex-col gap-1 items-center ${padding} ${width} ${height} text-blue-950 ${bg}`}
+      className={`flex flex-col gap-1 items-center ${padding} ${width} ${height} ${color} ${bg}`}
     >
       <DynamicIcon name={iconName} size={24} />
       {text}
