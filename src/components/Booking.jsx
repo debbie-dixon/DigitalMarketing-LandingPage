@@ -8,6 +8,14 @@ export default function Booking() {
     name: "",
     email: "",
     message: "",
+    myServices: [
+      "Search Engine Optimization (SEO)",
+      "Pay Per Click (PPC) Management",
+      "Conversion Rate Optimization (CRO)",
+      "Social Media & Content Marketing",
+      "Full-Service Digital Marketing",
+      "Other / Custom Strategy",
+    ],
   });
 
   const handleChange = (e) => {
@@ -44,7 +52,7 @@ export default function Booking() {
 
       if (result.success) {
         setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: "", service: "" });
       } else {
         setStatus("error");
       }
@@ -55,14 +63,17 @@ export default function Booking() {
 
   return (
     <>
-      <Header text="Contact Us" id="book" />
+      <Header text="Work With Us" id="book" color="text-blue-950" />
       <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-slate-200 shadow-xs my-8">
-        <h2 className="text-2xl font-bold text-slate-900 mb-2">
+        <h2 className="text-2xl font-bold text-blue-950 mb-2">
           Send us a message
         </h2>
         <p className="text-slate-600 mb-6 text-sm">
-          Fill out the form below and we will respond to your email as soon as
-          possible.
+          Have a question or want to discuss your project? Fill out the form
+          below and we'll get back to you as soon as possible.
+        </p>
+        <p className="text-slate-600 mb-6 text-sm">
+          We typically respond within 24 hours on business days.
         </p>
 
         {/* Success Notification */}
@@ -85,7 +96,7 @@ export default function Booking() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+            <label className="block text-xs font-semibold text-blue-950  uppercase tracking-wider mb-1">
               Name
             </label>
             <input
@@ -100,7 +111,7 @@ export default function Booking() {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+            <label className="block text-xs font-semibold text-blue-950  uppercase tracking-wider mb-1">
               Email Address
             </label>
             <input
@@ -114,8 +125,25 @@ export default function Booking() {
             />
           </div>
 
+          <select
+            name="service"
+            required
+            value={formData.service}
+            onChange={handleChange}
+            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm text-gray-900 bg-white cursor-pointer"
+          >
+            <option value="" disabled>
+              Select a service...
+            </option>
+            {formData.myServices.map((service, index) => (
+              <option key={index} value={service}>
+                {service}
+              </option>
+            ))}
+          </select>
+
           <div>
-            <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+            <label className="block text-xs font-semibold text-blue-950  uppercase tracking-wider mb-1">
               Message
             </label>
             <textarea
@@ -124,7 +152,7 @@ export default function Booking() {
               required
               value={formData.message}
               onChange={handleChange}
-              placeholder="How can we help you?"
+              placeholder="Additional details or questions you have..."
               className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-hidden focus:ring-2 focus:ring-slate-900 text-sm resize-none"
             ></textarea>
           </div>
@@ -132,7 +160,7 @@ export default function Booking() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
+            className="w-full inline-flex items-center justify-center gap-2 bg-blue-950 hover:bg-blue-900 text-white font-medium px-4 py-3 rounded-lg text-sm transition-colors disabled:opacity-50"
           >
             {status === "sending" ? (
               <>

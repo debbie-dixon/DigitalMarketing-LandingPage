@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
 
 function App() {
   useEffect(() => {
@@ -28,7 +28,7 @@ function App() {
         <Offers />
         <About />
         <Services />
-        <Gallery />
+        <Testimonials />
         <Booking />
         <Contact />
       </main>
