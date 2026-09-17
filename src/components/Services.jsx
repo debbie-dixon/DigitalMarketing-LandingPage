@@ -42,11 +42,14 @@ export default function Services() {
   ];
   return (
     <>
-      <Header text="Our Core Services" id="services" color="text-blue-950" />
-      <p className="text-center text-blue-950 mt-4 mb-4 ">
-        Tailored digital marketing strategies designed to scale your business
-        and drive measurable ROI.
-      </p>
+      <div className="mx-auto max-w-6xl px-6 sm:px-8">
+        <Header text="Our Core Services" id="services" color="text-blue-950" />
+      </div>
+      <div className="w-full px-6 sm:px-8">
+        <p className="mx-auto mt-4 mb-4 max-w-2xl text-center leading-relaxed text-blue-950">
+          Tailored digital marketing strategies designed to scale your business
+        </p>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-items-center mt-8 mb-8 gap-8">
         {myServices.map((service, index) => (
